@@ -9,8 +9,8 @@ def download_gaiadr3_sam():
     with open("gaiadr3.sam.gz", "wb") as gaiadr3_sam_gz:
         gaiadr3_sam_gz.write(r.content)
     with gzip.open("gaiadr3.sam.gz", "rb") as gaiadr3_sam_gz:
-        content = gaiadr3_sam_gz.read().decode("ASCII")
-    with open("gaiadr3.sam", "w") as gaiadr3_sam:
+        content = gaiadr3_sam_gz.read()
+    with open("gaiadr3.sam", "wb") as gaiadr3_sam:
         gaiadr3_sam.write(content)
 
 def test_read_txt():
