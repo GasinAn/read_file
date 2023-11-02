@@ -17,7 +17,7 @@ def test_read_txt():
         header=None,
         names=["DR3Name", "RAdeg", "DEdeg"],
         colspecs=[(0, 28), (29, 44), (45, 60)],
-        dtype={"DR3Name": str, "RAdeg": float, "DEdeg": float},
+        dtype=dict(zip(["DR3Name", "RAdeg", "DEdeg"], [str, float, float])),
     )
     print(f"dataframe.dtypes:\n{dataframe.dtypes}\n")
     print(f"dataframe:\n{dataframe}\n")
